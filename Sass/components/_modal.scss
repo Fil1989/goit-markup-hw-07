@@ -15,7 +15,7 @@
     top: 50%;
     left: 50%;
     width: 528px;
-    height: 581px;
+    // height: 581px;
     padding: 40px;
     background-color: $white;
     transform: translate(-50%, -50%) scale(1);
@@ -75,7 +75,7 @@
     font-size:12px;
   }
   .field:nth-child(1) {
-    margin-top: 30px;
+    margin-top: 12px;
   }
   .field input, .field textarea {
     width: 100%;
@@ -125,17 +125,23 @@
     display: block;
     width: 16px;
     height: 15px;
-    background-image: url(../images/icons/bird.svg);
+    background-image: url(../images/icons/bird1.svg);
+    background-color:$blue;
+    background-repeat: no-repeat;;
+    background-position: 2px 2px;
     opacity: 0;
     /* transition: 250ms; */
   }
   &:checked::after {
     opacity: 1;
   }
+  &:checked:hover::after {
+    background-color: #5da9e7;
+  }
 }
   .btn-modal {
-    margin: 0 auto;
-    margin-top: 30px;
+    display: block;
+    margin: 30px auto 0px;
     font-size: 16px;
     font-weight: bold;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

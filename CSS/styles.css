@@ -686,7 +686,6 @@ footer .but-icon svg {
   top: 50%;
   left: 50%;
   width: 528px;
-  height: 581px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -758,7 +757,7 @@ button.close-modal {
 }
 
 .field:nth-child(1) {
-  margin-top: 30px;
+  margin-top: 12px;
 }
 
 .field input, .field textarea {
@@ -831,7 +830,10 @@ button.close-modal {
   display: block;
   width: 16px;
   height: 15px;
-  background-image: url(../images/icons/bird.svg);
+  background-image: url(../images/icons/bird1.svg);
+  background-color: #2196F3;
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
   opacity: 0;
   /* transition: 250ms; */
 }
@@ -840,9 +842,13 @@ button.close-modal {
   opacity: 1;
 }
 
+.field-checkbox input:checked:hover::after {
+  background-color: #5da9e7;
+}
+
 .btn-modal {
-  margin: 0 auto;
-  margin-top: 30px;
+  display: block;
+  margin: 30px auto 0px;
   font-size: 16px;
   font-weight: bold;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
