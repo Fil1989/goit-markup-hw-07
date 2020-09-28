@@ -62,73 +62,60 @@
     letter-spacing: 0.03em;
     color: #212121;
   }
-  /* Стили формы в модалке начало */
-  .form-modal {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: $black;
-    font-size: 14px;
+  
+
+  .field {
     position: relative;
   }
-  .form-modal > input,
-  .form-modal textarea {
-    margin: 14px auto;
-    font-size: 14px;
-    position: relative;
-    resize: none;
+  .field label {
+    position: absolute;
+    top:-10px;
+    left:0px;
+    height: 50px;
+    font-size:12px;
   }
-  .form-modal input#name {
+  .field:nth-child(1) {
     margin-top: 30px;
   }
-  .form-modal textarea#comment {
+  .field input, .field textarea {
     width: 100%;
-    height: 120px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 14px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    padding: 13px 15px;
+&:focus{
+      outline-color: $blue;}
   }
-  .form-modal textarea#comment:focus {
-    outline-color: $blue;
-  }
-  textarea::placeholder {
-    font-size: 12px;
-  }
-  .form-modal > input {
-    width: 100%;
+  .field > input {
     height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
     padding: 11px 35px;
   }
-  .form-modal input:focus {
-    outline-color: $blue;
+  .field textarea::placeholder {
+    font-size: 12px;
   }
-  
-  .btn-modal {
-    margin: 0 auto;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  .field svg {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    z-index: 3;
   }
-  .checkbox-modal {
-    margin-top: 11px;
-    display: flex;
-    align-items: center;
+  .field textarea {
+    padding: 11px 15px;
+    height: 120px;
+    resize: none;
   }
-  .checkbox-modal div {
+  .field-checkbox input {
     margin-right: 8px;
-    margin-bottom: 3px;
-    height: 15px;
+    padding-top: 10px;
+    vertical-align: middle;
   }
-  .checkbox-modal label {
-    cursor: pointer;
+  .field-checkbox label {
+    display: inline-block;
   }
-  .checkbox-modal a {
-    color: $blue;
-  }
-  .checkbox-modal input {
+  .field-checkbox input {
     width: 16px;
     height: 15px;
     cursor: pointer;
@@ -142,44 +129,22 @@
     opacity: 0;
     /* transition: 250ms; */
   }
-  &::after:checked {
+  &:checked::after {
     opacity: 1;
   }
 }
-  svg.login,
-  svg.phone-call,
-  svg.sendmail {
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    bottom: -23px;
-    left: 15px;
-    z-index: 3;
+  .btn-modal {
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
-  
-  .form-modal > label {
-    position: absolute;
-    color: $active;
-    margin-top: 10px;
-    font-size: 12px;
+
+  .field-checkbox a {
+    color: $blue;
   }
-  .form-modal .name-label {
-    top: -2px;
-  }
-  .form-modal .tel-label {
-    top: 66px;
-  }
-  .form-modal .mail-label {
-    top: 134px;
-  }
-  .form-modal .comment-label {
-    top: 202px;
-  }
-  
   input:focus + label svg,
   textarea#comment:focus + label svg {
     fill: $blue;
   }
-  
-  /* Стили формы в модалке конец */
-  
